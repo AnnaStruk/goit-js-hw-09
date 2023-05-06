@@ -32,7 +32,7 @@ async function onSearchBoxInput(event) {
             return;
         }
       
-        if (result.length > 2 && result.length < 10) {
+        if (result.length >= 2 && result.length <= 10) {
             countriesListRef.innerHTML = createMarkupFlagCard(result);
             Notify.success(`We found ${result.length} countries`);
             return;
